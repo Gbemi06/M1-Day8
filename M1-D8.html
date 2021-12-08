@@ -9,7 +9,8 @@
   </head>
   <body>
     <div>
-      <button onclick="changeTitle()">change H1 Text</button>
+      <button onclick="addClassToTitle()">Adding title</button>
+      <button onclick="changeTitle()">change title</button>
       <h1 id = "head">This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </div>
@@ -66,16 +67,15 @@
       */
 
       const addClassToTitle = function () {
-        //
+        let demoNode = document.getElementById("head")
+        demoNode.classList.add("myHeading")
       };
 
       /* EXERCISE 3
        Write a function for changing the text of only the p which are children of a div.
       */
 
-      const changePcontent = function () {
-        //
-      };
+      
 
       /* EXERCISE 4
        Write a function for changing the href property of every link to https://www.google.com

@@ -9,13 +9,11 @@
   </head>
   <body>
     <div>
-      <button onclick="addClassToTitle()">Adding title</button>
-      <button onclick="changeTitle()">change title</button>
       <h1 id = "head">This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </div>
 
-    <div>
+    <div id = "d-id">
       <hr />
 
       <ul id="firstList">
@@ -33,7 +31,7 @@
       <a href="strive.school">This link goes to Strive School</a>
 
       <div>
-        <p>This text is just for the exercise</p>
+        <p class="para">This text is just for the exercise</p>
       </div>
 
       <div>
@@ -46,15 +44,15 @@
     </div>
 
     <div>
-      <p>And this text is just for the exercise too!</p>
+      <p class="para">And this text is just for the exercise too!</p>
       <h2 style="color: red">
         Save this page on your computer and open it with VSCode to get the
         questions!
       </h2>
     </div>
     <script>
-       const titleChange = function() { 
-        let newTitle = document.title
+       /* const titleChange = function() { 
+        const newTitle = document.title
         newTitle= 'the page title'
         
        }
@@ -67,6 +65,7 @@
         let newTitle = document.getElementById("head")
         newTitle.innerText = "Practice Document"
       };
+      changeTitle()
 
       /* EXERCISE 2
        Write a function for changing the class of the title of the page in "myHeading".
@@ -77,9 +76,23 @@
         demoNode.classList.add("myHeading")
       };
 
+      addClassToTitle()
+
       /* EXERCISE 3
        Write a function for changing the text of only the p which are children of a div.
       */
+      
+
+      const changePText = function() {
+
+        const pContent = document.querySelectorAll("div p")
+        for (let i = 0; i < pContent.length; i++) {
+           pContent[i].innerText = "new text for the paragraph"
+        }
+        
+      }
+
+      changePText()
 
       
 
@@ -88,8 +101,13 @@
       */
 
       const changeUrls = function () {
+        const changeATag = document.getElementsByTagName("a")
+        for (let i=0; i< changeATag.length; i++){
+          changeATag[i].href = "https://www.google.com"
+        }
         //
       };
+      changeUrls()
 
       /* EXERCISE 5
        Write a function for adding a new list item in the second unordered list.

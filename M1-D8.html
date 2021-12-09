@@ -13,7 +13,7 @@
       <h2>This is the subtitle of the page</h2>
     </div>
 
-    <div id = "d-id">
+    <div>
       <hr />
 
       <ul id="firstList">
@@ -114,8 +114,13 @@
       */
 
       const addToTheSecond = function (content) {
+        const addListNode = document.getElementById("secondList")
+        const addList = document.createElement("li")
+        addList.innerHTML = '<li>{content}</li>'
+          addListNode.appendChild(addList)
         //
       };
+      addToTheSecond()
 
       /* EXERCISE 6
        Write a function for adding a second paragraph to the first div.
